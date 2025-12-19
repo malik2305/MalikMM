@@ -1,0 +1,243 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #edfbff;
+    color: #000000;
+}
+
+/* Visually hidden but accessible */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Header */
+
+
+/* Sections */
+.section {
+    padding: 4rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.two-col.reverse {
+    direction: rtl;
+}
+
+.two-col.reverse > * {
+    direction: ltr;
+} 
+
+.full {
+    max-width: 100%;
+}
+
+.center {
+    text-align: center;
+}
+
+/* Grid section */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+/* Placeholder styles */
+.image {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.16);
+}
+
+.image.wide {
+    height: 300px;
+} 
+
+.text {
+    background: #BBE3F2;
+    padding: 2rem;
+    max-width: 600px;
+} 
+
+.card {
+    padding: 2rem;
+    
+}
+
+/* Footer */
+.footer {
+    background: #030303;
+    padding: 2rem;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .two-col,
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* Kontakt */
+.contact {
+    background: #6e6e6e;
+    text-align: center;
+}
+
+.contact h2 {
+    margin-bottom: 2rem;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 1rem;
+    border: none;
+    background: #ffffff;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    padding: 1rem;
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, transform 0.12s ease;
+}
+
+.contact-form button:hover {
+    background: #eb0000;
+    color: #fff;
+}
+
+.contact-form button:focus-visible {
+    outline: 3px solid #ffdd57;
+    outline-offset: 3px;
+} 
+.header {
+    background: #3ABEFF;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;      /* justér efter behov */
+    width: auto;
+    display: block;
+} 
+
+/* Navigation */
+.header nav a {
+    margin-left: 1rem;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 0.4rem 0.8rem;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+
+.header nav a:focus-visible,
+.header nav a:focus {
+    outline: 3px solid rgba(255,255,255,0.9);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+.header nav .cta {
+    background: #ffffff;
+    border-radius: 4px;
+} 
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    max-width: 100%;
+}
+
+.hero .image img {
+    min-height: 250px;
+}
+
+.full .wide img {
+    height: 300px;
+}
+
+/* Cards */
+.card.image img {
+    height: 200px;
+}
+/* ---------- Kompetencer (Skills) ---------- */
+#kompetencer ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    list-style: none;
+    padding: 0;
+    gap: 1rem;
+}
+
+#kompetencer li {
+    background-color: #809eee;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 10px;
+    border-bottom: 3px solid #647af5;
+
+}
+.rounded {
+    border-radius: 12px;
+}
+
+
+
+.text p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+.kompetence {
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.kompetence:hover {
+    background-color: #6f8df0;
+    transform: translateY(-2px);
+} 
+#produkter > h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+}
